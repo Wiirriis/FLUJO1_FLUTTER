@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:agricontrol_plus/widgets/imageCard.dart';
 
 class LoginScreen extends StatelessWidget {
-  const LoginScreen({Key? key}) : super(key: key);
+  LoginScreen({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -123,8 +123,10 @@ class LoginScreen extends StatelessWidget {
       ),
     );
 
-    return Column(
+    return Material(
+      child:  Column(
       children: <Widget>[imageLogo, userName, textFieldPassword, controlsLogin, loginButton],
+    ),
     );
   }
 }

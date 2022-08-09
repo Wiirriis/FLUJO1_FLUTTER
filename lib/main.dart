@@ -1,6 +1,8 @@
 import 'package:agricontrol_plus/login/screens/welcomeScreen.dart';
 import 'package:flutter/material.dart';
 import 'package:agricontrol_plus/login/screens/loginScreen.dart';
+import 'package:agricontrol_plus/main/mainDashboard.dart';
+import 'package:agricontrol_plus/widgets/drawer.dart';
 
 void main() {
   runApp(const MyApp());
@@ -17,9 +19,7 @@ class MyApp extends StatelessWidget {
         primarySwatch: Colors.blue,
         scaffoldBackgroundColor: Colors.white
       ),
-      home: const Scaffold (
-        body: LoginScreen(),
-      ),
+      home:  MainDashboard(),
     );
   }
 }
