@@ -1,3 +1,4 @@
+import 'package:agricontrol_plus/login/screens/loginScreen.dart';
 import 'package:flutter/material.dart';
 
 class WelcomeScreen extends StatelessWidget {
@@ -67,13 +68,27 @@ class WelcomeScreen extends StatelessWidget {
       ],
     );
 
-    return Container(
-      margin: EdgeInsets.only(
-        top: 24,
-      ),
-      child: Column(
-        children: <Widget>[header, welcomeText, footer],
-      ),
+    return Stack(
+      children: <Widget>[
+        Positioned.fill(
+            child: GestureDetector(
+          onTap: () {
+            Navigator.push(
+              context,
+              MaterialPageRoute(builder: (context) => LoginScreen()),
+            );
+          },
+          child: Container(
+            color: Colors.white,
+            margin: EdgeInsets.only(
+              top: 24,
+            ),
+            child: Column(
+              children: <Widget>[header, welcomeText, footer],
+            ),
+          ),
+        ))
+      ],
     );
   }
 }
