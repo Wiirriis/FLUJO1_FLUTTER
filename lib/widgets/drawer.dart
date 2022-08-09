@@ -15,7 +15,7 @@ class mainDrawer extends StatelessWidget {
       ItemList('Estadisticas', Icons.bar_chart),
       ItemList('Listado de cambios', Icons.list),
       ItemList('Actualizar catalogos', Icons.phonelink),
-      ItemList('Exportar base de datos', Icons.cloud_sync),
+      ItemList('Exportar base de datos', Icons.cloud_sync)
     ];
 
     return Drawer(
@@ -36,28 +36,29 @@ class mainDrawer extends StatelessWidget {
             )),
         Expanded(child: ActionList(itemsList)),
         Container(
-          alignment: Alignment.bottomLeft,
-          width: 150,
-          height: 100,
-          margin: EdgeInsets.only(left: 24, bottom: 24),
-          child: Material(
-      borderRadius: BorderRadius.circular(10),
-
-            child: InkWell(
-            onTap: (){},
-              child: Container(
-            padding: EdgeInsets.all(2),
-                child: Text(
-            'Cerrar sesion',
-            style: TextStyle(
-              color: Color(0xff3f4e71),
-              fontSize: 14,
-            ),
-          ),
-              )
-            ),
-          )
-        ),
+            alignment: Alignment.bottomLeft,
+            margin: EdgeInsets.only(left: 24, bottom: 24, top: 16),
+            child: Material(
+              borderRadius: BorderRadius.circular(10),
+              child: InkWell(
+                  onTap: () {},
+                  customBorder: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(10),
+                  ),
+                  child: Container(
+                    decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(10),
+                    ),
+                    padding: EdgeInsets.all(4),
+                    child: Text(
+                      'Cerrar sesion',
+                      style: TextStyle(
+                        color: Color(0xff3f4e71),
+                        fontSize: 14,
+                      ),
+                    ),
+                  )),
+            )),
       ],
     ));
   }
