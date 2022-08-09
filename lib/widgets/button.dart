@@ -32,17 +32,20 @@ class _Button extends State<Button> {
       color: Color(widget.colorSolid),
       borderRadius: BorderRadius.circular(10),
       child: InkWell(
-      onTap: widget.onPressed,
-      child: Container(
-          width: widget.width,
-          height: widget.height,
-          child: Center(
-              child: Text(widget.text,
-                  style: TextStyle(
-                      fontSize: 18.0,
-                      fontFamily: 'Lato',
-                      color: Colors.white)))),
-    ),
+        onTap: widget.onPressed,
+        customBorder: RoundedRectangleBorder(
+          borderRadius: BorderRadius.circular(10),
+        ),
+        child: Container(
+            width: widget.width,
+            height: widget.height,
+            child: Center(
+                child: Text(widget.text,
+                    style: TextStyle(
+                        fontSize: 18.0,
+                        fontFamily: 'Lato',
+                        color: Colors.white)))),
+      ),
     );
   }
 }
