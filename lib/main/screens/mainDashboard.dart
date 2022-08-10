@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:agricontrol_plus/main/widgets/drawer.dart';
-import 'package:charts_flutter/flutter.dart' as charts;
+import 'package:agricontrol_plus/main/widgets/imageHeader.dart';
 
 class MainDashboard extends StatefulWidget {
   MainDashboard({Key? key}) : super(key: key);
@@ -11,7 +11,6 @@ class MainDashboard extends StatefulWidget {
 
 class _MainDashboardState extends State<MainDashboard> {
   GlobalKey<ScaffoldState> _key = GlobalKey<ScaffoldState>();
-  String pathImageAgricontrol = 'assets/img/agricontrol_logo_small.jpg';
 
   @override
   Widget build(BuildContext context) {
@@ -25,15 +24,7 @@ class _MainDashboardState extends State<MainDashboard> {
                   onPressed: () {
                     _key.currentState?.openDrawer();
                   }),
-              Container(
-                height: 100,
-                alignment: Alignment.topCenter,
-                child: Image.asset(
-                  pathImageAgricontrol,
-                  height: 100,
-                  scale: 1,
-                ),
-              )
+              ImageHeader()
             ],
           ),
           Align(
@@ -199,51 +190,50 @@ class _MainDashboardState extends State<MainDashboard> {
             children: <Widget>[
               Expanded(
                 child: Card(
-                shape: RoundedRectangleBorder(
-                  borderRadius: BorderRadius.circular(20.0),
-                ),
-                shadowColor: Colors.black,
-                elevation: 5,
-                margin:
-                    EdgeInsets.only(top: 16, left: 24, right: 16, bottom: 16),
-                child: Padding(
-                  padding: EdgeInsets.only(top: 16, bottom: 16),
-                  child: Column(children: <Widget>[
-                  Icon(Icons.person_add, color: Color(0xff74c686), size: 50),
-                  Text('Agregar\nproductor',
-                        textAlign: TextAlign.center,
-                      style: TextStyle(
-                        fontSize: 14.0,
-                        fontFamily: 'Lato',
-                        color: Color(0xff537d99),
-                      ))
-                ]),
-                )
-              ),
+                    shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(20.0),
+                    ),
+                    shadowColor: Colors.black,
+                    elevation: 5,
+                    margin: EdgeInsets.only(
+                        top: 16, left: 24, right: 16, bottom: 16),
+                    child: Padding(
+                      padding: EdgeInsets.only(top: 16, bottom: 16),
+                      child: Column(children: <Widget>[
+                        Icon(Icons.person_add,
+                            color: Color(0xff74c686), size: 50),
+                        Text('Agregar\nproductor',
+                            textAlign: TextAlign.center,
+                            style: TextStyle(
+                              fontSize: 14.0,
+                              fontFamily: 'Lato',
+                              color: Color(0xff537d99),
+                            ))
+                      ]),
+                    )),
               ),
               Expanded(
                 child: Card(
-                shape: RoundedRectangleBorder(
-                  borderRadius: BorderRadius.circular(20.0),
-                ),
-                shadowColor: Colors.black,
-                elevation: 5,
-                margin:
-                    EdgeInsets.only(top: 16, left: 16, right: 24, bottom: 16),
-                child: Padding(
-                  padding: EdgeInsets.only(top: 16, bottom: 16),
-                  child: Column(children: <Widget>[
-                  Icon(Icons.group, color: Color(0xff74c686), size: 50),
-                  Text('Ver\nproductor',
-                        textAlign: TextAlign.center,
-                      style: TextStyle(
-                        fontSize: 14.0,
-                        fontFamily: 'Lato',
-                        color: Color(0xff537d99),
-                      ))
-                ]),
-                )
-              ),
+                    shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(20.0),
+                    ),
+                    shadowColor: Colors.black,
+                    elevation: 5,
+                    margin: EdgeInsets.only(
+                        top: 16, left: 16, right: 24, bottom: 16),
+                    child: Padding(
+                      padding: EdgeInsets.only(top: 16, bottom: 16),
+                      child: Column(children: <Widget>[
+                        Icon(Icons.group, color: Color(0xff74c686), size: 50),
+                        Text('Ver\nproductor',
+                            textAlign: TextAlign.center,
+                            style: TextStyle(
+                              fontSize: 14.0,
+                              fontFamily: 'Lato',
+                              color: Color(0xff537d99),
+                            ))
+                      ]),
+                    )),
               )
             ],
           )

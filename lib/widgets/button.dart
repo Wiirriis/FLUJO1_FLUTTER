@@ -9,6 +9,8 @@ class Button extends StatefulWidget {
   int colorPrimary = 0xFFa7ff84;
   int colorSecondary = 0xFF1cbb78;
   int colorSolid = 0xff2cb2e4;
+  double borderRadius = 10;
+  double fontSize = 18.0;
 
   Button(
       {Key? key,
@@ -19,7 +21,10 @@ class Button extends StatefulWidget {
       this.gradient = false,
       this.colorPrimary = 0xFFa7ff84,
       this.colorSecondary = 0xFF1cbb78,
-      this.colorSolid = 0xff2cb2e4});
+      this.colorSolid = 0xff2cb2e4,
+      this.borderRadius = 10,
+      this.fontSize = 18.0,
+      });
 
   @override
   State createState() => _Button();
@@ -30,11 +35,11 @@ class _Button extends State<Button> {
   Widget build(BuildContext context) {
     return Material(
       color: Color(widget.colorSolid),
-      borderRadius: BorderRadius.circular(10),
+      borderRadius: BorderRadius.circular(widget.borderRadius),
       child: InkWell(
         onTap: widget.onPressed,
         customBorder: RoundedRectangleBorder(
-          borderRadius: BorderRadius.circular(10),
+          borderRadius: BorderRadius.circular(widget.borderRadius),
         ),
         child: Container(
             width: widget.width,
@@ -42,9 +47,11 @@ class _Button extends State<Button> {
             child: Center(
                 child: Text(widget.text,
                     style: TextStyle(
-                        fontSize: 18.0,
+                        fontSize: widget.fontSize,
                         fontFamily: 'Lato',
-                        color: Colors.white)))),
+                        color: Colors.white,
+                        fontWeight: FontWeight.bold
+                        )))),
       ),
     );
   }
