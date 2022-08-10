@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'dart:developer';
 import 'package:agricontrol_plus/widgets/list.dart';
 
 class mainDrawer extends StatelessWidget {
