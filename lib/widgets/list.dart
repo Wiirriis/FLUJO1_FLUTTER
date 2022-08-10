@@ -47,11 +47,19 @@ class ActionList extends StatelessWidget {
 }
 
 /* 
-    List<dynamic> itemsList = [
-      {
-        'title': 'titulo',
-        'subtitle': 'subtitle'
-      }
-    ]; 
+    EXAMPLE FOR USE:
+    
+    List<ItemList> itemsList = [
+      ItemList('Sincronizar', Icons.sync, 'Ultima sincronizacion 27/07/2007'),
+      ItemList('Acerca del proyecto', Icons.info_outline),
+      ItemList('Productores', Icons.groups),
+      ItemList('Eventos', Icons.event),
+      ItemList('Estadisticas', Icons.bar_chart),
+      ItemList('Listado de cambios', Icons.list),
+      ItemList('Actualizar catalogos', Icons.phonelink),
+      ItemList('Exportar base de datos', Icons.cloud_sync)
+    ];
+
+    ActionList(itemsList)
     */
 

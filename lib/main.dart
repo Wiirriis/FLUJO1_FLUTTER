@@ -1,8 +1,8 @@
 import 'package:agricontrol_plus/login/screens/welcomeScreen.dart';
 import 'package:flutter/material.dart';
 import 'package:agricontrol_plus/login/screens/loginScreen.dart';
-import 'package:agricontrol_plus/main/mainDashboard.dart';
-import 'package:agricontrol_plus/widgets/drawer.dart';
+import 'package:agricontrol_plus/main/screens/mainDashboard.dart';
+import 'package:agricontrol_plus/main/widgets/drawer.dart';
 
 void main() {
   runApp(const MyApp());
