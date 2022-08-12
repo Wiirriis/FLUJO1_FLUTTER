@@ -3,8 +3,9 @@ import 'package:agricontrol_plus/widgets/button.dart';
 
 class ActionCard extends StatelessWidget {
   String pathImage = 'assets/img/avatar1.jpg';
-
-  ActionCard({Key? key}) : super(key: key);
+  /* final Widget? child; */
+  
+  ActionCard({Key? key, /* required this.child,  */this.pathImage = 'assets/img/avatar1.jpg'}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -26,7 +27,8 @@ class ActionCard extends StatelessWidget {
                         padding: EdgeInsets.all(0),
                         splashRadius: 15,
                         icon: Icon(Icons.expand_more, color: Color(0xff88c43b)),
-                        onPressed: () {})),
+                        onPressed: () {})
+                      ),
                 Container(
                   margin: EdgeInsets.only(top: 16, bottom: 12),
                   child: Row(
